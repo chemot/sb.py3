@@ -192,24 +192,24 @@ def backupData():
         return False
 
 def helpmessage():
-    helpMessage = "╔══[HΣLP MΣSSΔGΣ]" + "\n" + \
+    helpMessage = "╔══[sᴇᴘʀɪ ʙᴏᴛ ʜᴇʟᴘ]" + "\n" + \
                   "╠➣ Help" + "\n" + \
                   "╠➣ Translate" + "\n" + \
                   "╠➣ TextToSpeech" + "\n" + \
-                  "╠══[ STΔTUS CΩMMΔΠD ]" + "\n" + \
+                  "╠══[ s ᴛ ᴀ ᴛ ᴜ s ]" + "\n" + \
                   "╠➣ Restart" + "\n" + \
                   "╠➣ Runtime" + "\n" + \
                   "╠➣ Speed" + "\n" + \
                   "╠➣ Status" + "\n" + \
                   "╠➣ About" + "\n" + \
-                  "╠══[ SΣTTIΠGS CΩMMΔΠD ]" + "\n" + \
+                  "╠══[ s ᴇ ᴛ ᴛ ɪ ɴ ɢ s ]" + "\n" + \
                   "╠➣ AutoAdd「On/Off」" + "\n" + \
                   "╠➣ AutoJoin「On/Off」" + "\n" + \
                   "╠➣ AutoLeave「On/Off」" + "\n" + \
                   "╠➣ AutoRead「On/Off」" + "\n" + \
                   "╠➣ CheckSticker「On/Off」" + "\n" + \
                   "╠➣ DetectMention「On/Off」" + "\n" + \
-                  "╠══[ SΣLҒ CΩMMΔΠD ]" + "\n" + \
+                  "╠══[ s ᴇ ʟ ғ ]" + "\n" + \
                   "╠➣ Me" + "\n" + \
                   "╠➣ MyMid" + "\n" + \
                   "╠➣ MyName" + "\n" + \
@@ -226,7 +226,7 @@ def helpmessage():
                   "╠➣ StealCover「Mention」" + "\n" + \
                   "╠➣ CloneProfile「Mention」" + "\n" + \
                   "╠➣ RestoreProfile" + "\n" + \
-                  "╠══[ GRΩUP CΩMMΔΠD ]" + "\n" + \
+                  "╠══[ ɢ ʀ ᴏ ᴜ ᴘ ]" + "\n" + \
                   "╠➣ GroupCreator" + "\n" + \
                   "╠➣ GroupId" + "\n" + \
                   "╠➣ GroupName" + "\n" + \
@@ -244,7 +244,7 @@ def helpmessage():
                   "╠➣ Tagall" + "\n" + \
                   "╠➣ Lurking「On/Off/Reset」" + "\n" + \
                   "╠➣ Lurking" + "\n" + \
-                  "╠══[ MΣDIΔ CΩMMΔΠD ]" + "\n" + \
+                  "╠══[ ᴍ ᴇ ᴅ ɪ ᴀ ]" + "\n" + \
                   "╠➣ Kalender" + "\n" + \
                   "╠➣ CheckDate「Date」" + "\n" + \
                   "╠➣ InstagramInfo「UserName」" + "\n" + \
@@ -254,7 +254,7 @@ def helpmessage():
                   "╠➣ SearchLyric「Search」" + "\n" + \
                   "╠➣ SearchImage「Search」" + "\n" + \
                   "╠➣ ScreenshootWebsite「LinkURL」" + "\n" + \
-                  "╚══[     TΣΔM SLΔCҜβΩT      ]"
+                  "╚══[     ʀᴇsɪᴅɪᴠɪs ᴋɪʟʟᴇʀ      ]"
     return helpMessage
     
 def helptexttospeech():
@@ -425,7 +425,7 @@ def helptranslate():
                        "╠ fil : Filipino" + "\n" + \
                        "╠ he : Hebrew" + "\n" + \
                        "╚══[ Jangan Typo ]" + "\n" + "\n\n" + \
-                         "Contoh : Say-Id Galank Gateng"
+                         "Contoh : Say-Id sepriche"
     return helpTranslate
 #==============================================================================#
 def GalankBot(op):
@@ -436,7 +436,7 @@ def GalankBot(op):
         if op.type == 5:
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
-                Galank.sendMessage(op.param1, "Halo {} terimakasih telah menambahkan saya sebagai teman :D".format(str(Galank.getContact(op.param1).displayName)))
+                Galank.sendMessage(op.param1, "Halo {} salken ya, by. sepriche :D".format(str(Galank.getContact(op.param1).displayName)))
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE GROUP")
             group = Galank.getGroup(op.param1)
@@ -467,7 +467,7 @@ def GalankBot(op):
                 if text.lower() == 'help':
                     helpMessage = helpmessage()
                     Galank.sendMessage(to, str(helpMessage))
-                    Galank.sendContact(to, "u78643d09e42a36836a17cc918963a8b7")
+                    Galank.sendContact(to, "u9f09cfcb17d037e2936b751bd9d40ead")
                 elif text.lower() == 'texttospeech':
                     helpTextToSpeech = helptexttospeech()
                     Galank.sendMessage(to, str(helpTextToSpeech))
@@ -492,7 +492,7 @@ def GalankBot(op):
                 elif text.lower() == 'about':
                     try:
                         arr = []
-                        owner = "u78643d09e42a36836a17cc918963a8b7"
+                        owner = "u9f09cfcb17d037e2936b751bd9d40ead"
                         creator = Galank.getContact(owner)
                         contact = Galank.getContact(GalankMID)
                         grouplist = Galank.getGroupIdsJoined()
@@ -504,9 +504,9 @@ def GalankBot(op):
                         ret_ += "\n╠ Friend : {}".format(str(len(contactlist)))
                         ret_ += "\n╠ Blocked : {}".format(str(len(blockedlist)))
                         ret_ += "\n╠══[ About Selfbot ]"
-                        ret_ += "\n╠ Version : SLΔCҜβΩT"
+                        ret_ += "\n╠ Version : sepribot"
                         ret_ += "\n╠ Creator : {}".format(creator.displayName)
-                        ret_ += "\n╚══[ TΣΔM SLΔCҜβΩT ]"
+                        ret_ += "\n╚══[ ʀᴇsɪᴅɪᴠɪs ᴋɪʟʟᴇʀ ]"
                         Galank.sendMessage(to, str(ret_))
                     except Exception as e:
                         Galank.sendMessage(msg.to, str(e))
@@ -854,23 +854,23 @@ def GalankBot(op):
                 elif text.lower() == 'welcome on':
                    if settings["Sambutan"] == True:
                        if settings["lang"] == "JP":
-                           Galank.sendMessage(msg.to,"Sudah Onヽ(´▽｀)/")
+                           Galank.sendMessage(msg.to,"Sudah On👍")
                    else:
                        settings["Sambutan"] = True
                        if settings["lang"] == "JP":
-                           Galank.sendMessage(msg.to,"Sambutan Di Aktifkanヾ(*´∀｀*)ﾉ")
+                           Galank.sendMessage(msg.to,"Sambutan Di Aktifkan👍")
 
                 elif text.lower() == 'welcome off':
                    if settings["Sambutan"] == False:
                        if settings["lang"] == "JP":
-                          Galank.sendMessage(msg.to,"Sudah Off(p′︵‵。)")
+                          Galank.sendMessage(msg.to,"Sudah Off👎")
                    else: 
                        settings["Sambutan"] = False
                        if settings["lang"] == "JP":
-                           Galank.sendMessage(msg.to,"Sambutan Di Nonaktifkan(　＾∇＾)")
+                           Galank.sendMessage(msg.to,"Sambutan Di Nonaktifkan👎")
 
 #==============================================================================#          
-                elif text.lower() == 'tagall':
+                elif text.lower() == 'Crot':
                             if msg.toType == 0:
                                 sendMention(to, to, "", "")
                             elif msg.toType == 2:
@@ -2584,7 +2584,7 @@ def GalankBot(op):
              ginfo = Galank.getGroup(op.param1)
              contact = Galank.getContact(op.param2)
              image = "http://dl.profile.line.naver.jp/" + contact.pictureStatus
-             Galank.sendMessage(op.param1,"Hii " + Galank.getContact(op.param2).displayName + "\nWelcome To ☞ " + str(ginfo.name) + " ☜" + "\njangan lupa tikung\nDan Semoga Betah Disini ye")
+             Galank.sendMessage(op.param1,"ehem.. " + Galank.getContact(op.param2).displayName + "\nmet gabung di  " + str(ginfo.name) + " " + "\nsalam kenal ya\nby. sᴇᴘʀɪᴄʜᴇ")
              Galank.sendImageWithURL(op.param1,image)
 
         if op.type == 15:
@@ -2596,7 +2596,7 @@ def GalankBot(op):
              contact = Galank.getContact(op.param2)
              image = "http://dl.profile.line.naver.jp/" + contact.pictureStatus
              Galank.sendImageWithURL(op.param1,image)
-             Galank.sendMessage(op.param1,"Good Bye " + Galank.getContact(op.param2).displayName + "\nSee You Next Time .")
+             Galank.sendMessage(op.param1,"Nah.. " + Galank.getContact(op.param2).displayName + "\nBaper dia 🙄🙄")
 #==============================================================================#
         if op.type == 55:
             print ("[ 55 ] NOTIFIED READ MESSAGE")

@@ -2263,7 +2263,7 @@ def GalankBot(op):
                      
                 elif text.lower() == 'creator':
                     Galank.sendMessage(to, "My Creator:")
-                    Galank.sendContact(to, "u78643d09e42a36836a17cc918963a8b7")
+                    Galank.sendContact(to, "u9f09cfcb17d037e2936b751bd9d40ead")
 
                 elif msg.text.lower().startswith("/ "):
                    txt = text.split(" ")

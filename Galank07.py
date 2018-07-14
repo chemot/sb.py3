@@ -2646,6 +2646,31 @@ def GalankBot(op):
                 pass
     except Exception as error:
         logError(error)
+	
+	if 'MENTION' in msg.contentMetadata.keys() != None:
+                 if wait["detectMention3"] == True:          
+                    contact = nadya.getContact(msg.from_)
+                    cName = contact.displayName
+                    balas = ["Woii " + cName + ", Nah yang kangen gw nambah 1 orng"]
+                    balas1 = "Jangan tag orng nya lagi bobo"
+                    ret_ = random.choice(balas)
+                    image = "http://dl.profile.line-cdn.net/" + contact.pictureStatus
+                    name = re.findall(r'@(\w+)', msg.text)
+                    mention = ast.literal_eval(msg.contentMetadata['MENTION'])
+                    mentionees = mention['MENTIONEES']
+                    for mention in mentionees:
+                           if mention['M'] in Bots:
+                                  nadya.sendText(msg.to,ret_)
+                                  nadya.sendText(msg.to,balas1)
+                                  nadya.sendImageWithURL(msg.to,image)
+                                  msg.contentType = 7   
+                                  msg.text = None
+                                  msg.contentMetadata = {
+                                                       "STKID": "17773521",
+                                                       "STKPKGID": "1480028",
+                                                       "STKVER": "1" }
+                                  nadya.sendMessage(msg)                                
+                                  break  
 #==============================================================================#
 while True:
     try:
